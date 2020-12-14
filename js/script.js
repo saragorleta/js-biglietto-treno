@@ -9,19 +9,24 @@
 // ai km (0.21 € al km), ma va applicato
 // uno sconto del 20% per i minorenni e
 // del 40% per gli over 65.
+var prezzoFinale;
+var eta=parseInt( prompt('inserisci la tua età') );
+var totKm=parseInt( prompt('inserisci il numero di km che devi percorrere') );
+var prezzoBigliettoPieno= 0.21 * totKm;
+// var sconto18= prezzoBigliettoPieno - (prezzoBigliettoPieno * 30/100);
+// var sconto65=prezzoBigliettoPieno -(prezzoBigliettoPieno * 40/100);
 
-var eta=parseInt(prompt('inserisci la tua età'));
-var totKm=parseInt(prompt('inserisci il numero di km che devi percorrere'));
-var prezzoBigliettoPieno= (0,21 * totKm);
-var sconto18= prezzoBigliettoPieno - (prezzoBigliettoPieno * 30/100);
-var sconto65=(prezzoBigliettoPieno -(prezzoBigliettoPieno * 40/100);
-
-// console.log(sconto18);
+// console.log(prezzoBigliettoPieno);
 
 if (eta<18){
-  sconto18=è minore di 18;
+  prezzoFinale=prezzoBigliettoPieno - (prezzoBigliettoPieno * 30/100);
 }
-    else if(eta>65){
-      sconto65= è maggiore di 65;
-    }
-  
+else if(eta>65){
+  prezzoFinale=prezzoBigliettoPieno - (prezzoBigliettoPieno * 40/100);
+}
+else{
+  prezzoFinale=prezzoBigliettoPieno;
+}
+  // console.log(prezzoFinale.toFixed(2));
+
+  document.getElementById('prezzo-biglietto')+=' ' + prezzoFinale.toFixed(2);
