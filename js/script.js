@@ -13,11 +13,15 @@
 var eta=parseInt(prompt('inserisci la tua età'));
 var totKm=parseInt(prompt('inserisci il numero di km che devi percorrere'));
 var prezzoBigliettoPieno= (0,21 * totKm);
-var sconto18=(prezzoBigliettoPieno * 30/100);
-var sconto65=(prezzoBigliettoPieno * 40/100);
+var sconto18= prezzoBigliettoPieno - (prezzoBigliettoPieno * 30/100);
+var sconto65=(prezzoBigliettoPieno -(prezzoBigliettoPieno * 40/100);
 
-if (eta<18)
-  console.log('sconto18'è minore di 18);
+// console.log(sconto18);
 
-  else if(eta>65)
-    console.log('sconto65'è maggiore di 65);
+if (eta<18){
+  sconto18=è minore di 18;
+}
+    else if(eta>65){
+      sconto65= è maggiore di 65;
+    }
+  
